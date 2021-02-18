@@ -1,0 +1,8 @@
+.item-button:focus,
+.item-button:active,
+.item-button:hover
+.item-button[aria-controls="demo-popup-popover"] 
+{
+  background-color: #122143;
+  border-left: 6px solid #5584ff !important;
+}

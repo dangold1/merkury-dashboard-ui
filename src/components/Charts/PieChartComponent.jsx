@@ -28,6 +28,9 @@ const optionsState = {
     },
     colors: ['#25396e', '#5584ff', '#4b74e0', '#4164c2', '#3755a4'],
     labels: ["Websites", "Logo", "Social Media", "Adwords", "E-commerce"],
+    dataLabels: {
+        enabled: false,
+    },
     stroke: { width: 0 },
     plotOptions: {
         pie: {

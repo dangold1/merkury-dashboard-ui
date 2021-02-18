@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -7,19 +8,14 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
-
 import MenuOpenIcon from '@material-ui/icons/MenuOpen';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import EmailIcon from '@material-ui/icons/Email';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import SearchIcon from '@material-ui/icons/Search';
-
-import MenuListItems from '../../components/MenuListItems/MenuListItems';
-import { Button, Typography } from '@material-ui/core';
+import MenuListItems from '../MenuListItems/MenuListItems';
+import { Button, Container, Typography } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import DashboardRoutes from '../../routes/DashboardRoutes';
 
@@ -92,6 +88,16 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(9),
     },
   },
+  appBarSpacer: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+    height: '100vh',
+    overflow: 'auto',
+  },
+  container: {
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(5),
+  },
 }));
 
 const Dashboard = () => {
@@ -103,7 +109,7 @@ const Dashboard = () => {
   };
 
   return (
-    
+
     <div className={classes.root}>
       <CssBaseline />
 
@@ -169,8 +175,14 @@ const Dashboard = () => {
       </Drawer>
 
       {/* Content */}
-      <DashboardRoutes/>
-    </div>
+      <div className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+          <DashboardRoutes />
+        </Container>
+      </div>
+
+    </div >
   );
 }
 
