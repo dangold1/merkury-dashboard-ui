@@ -29,24 +29,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-// Generate Sales Data
-const createData = (time, amount) => ({ time, amount });
 
-const data = [
-    createData('00:00', 300),
-    createData('01:00', 350),
-    createData('02:00', 280),
-    createData('03:00', 380),
-    createData('04:00', 350),
-    createData('05:00', 700),
-    createData('07:00', 400),
-    createData('08:00', 450),
-    createData('09:00', 280),
-    createData('10:00', 350),
-    createData('11:00', 280),
-];
-
-const LineChartComponent = () => {
+const LineChartComponent = (props) => {
     const theme = useTheme();
     const classes = useStyles();
 
@@ -72,7 +56,7 @@ const LineChartComponent = () => {
             </div>
             <ResponsiveContainer>
                 <LineChart
-                    data={data}
+                    data={props.data}
                     width={300} height={300}
                     margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
                 >
@@ -91,5 +75,11 @@ const LineChartComponent = () => {
         </Fragment>
     );
 };
+
+
+LineChartComponent.defaultProps = {
+    data: [],
+}
+
 
 export default LineChartComponent;

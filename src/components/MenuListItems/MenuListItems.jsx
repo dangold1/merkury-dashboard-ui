@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import List from '@material-ui/core/List';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -10,7 +11,7 @@ import ViewAgendaOutlinedIcon from '@material-ui/icons/ViewAgendaOutlined';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import DateRangeOutlinedIcon from '@material-ui/icons/DateRangeOutlined';
-
+import clsx from 'clsx';
 import { Link, useLocation } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import './MenuListItems.css';
@@ -26,16 +27,23 @@ const useStyles = makeStyles((theme) => ({
             borderLeft: "6px solid #5584ff !important",
         },
     },
+    selected: {
+        // backgroundColor: "#122143",
+        borderLeft: "6px solid #5584ff !important",
+    }
 }));
 
 
 const MenuListItems = () => {
     const classes = useStyles();
+    const history = useHistory()
+    const [currentPath, setCurrentPath] = useState(history.location.pathname)    
+    history.listen((location) => setCurrentPath(location.pathname));
 
     return (
         <List>
             <Link className={classes.link} to="/" >
-                <MenuItem button className={classes.activeItem}>
+                <MenuItem button className={clsx(classes.activeItem, currentPath === '/' ? classes.selected : null)}>
                     <ListItemIcon>
                         <HomeOutlinedIcon color="primary" />
                     </ListItemIcon>
@@ -45,7 +53,7 @@ const MenuListItems = () => {
             <Divider />
 
             <Link className={classes.link} to="/workflow">
-                <MenuItem button className={classes.activeItem}>
+                <MenuItem button className={clsx(classes.activeItem, currentPath === '/workflow' ? classes.selected : null)}>
                     <ListItemIcon>
                         <ViewAgendaOutlinedIcon color="primary" />
                     </ListItemIcon>
@@ -55,7 +63,7 @@ const MenuListItems = () => {
             <Divider />
 
             <Link className={classes.link} to="/statistics">
-                <MenuItem button className={classes.activeItem}>
+                <MenuItem button className={clsx(classes.activeItem, currentPath === '/statistics' ? classes.selected : null)}>
                     <ListItemIcon>
                         <TrendingUpOutlinedIcon color="primary" />
                     </ListItemIcon>
@@ -65,7 +73,7 @@ const MenuListItems = () => {
             <Divider />
 
             <Link className={classes.link} to="/calendar">
-                <MenuItem button className={classes.activeItem}>
+                <MenuItem button className={clsx(classes.activeItem, currentPath === '/calendar' ? classes.selected : null)}>
                     <ListItemIcon>
                         <DateRangeOutlinedIcon color="primary" />
                     </ListItemIcon>
@@ -75,7 +83,7 @@ const MenuListItems = () => {
             <Divider />
 
             <Link className={classes.link} to="/users">
-                <MenuItem button className={classes.activeItem}>
+                <MenuItem button className={clsx(classes.activeItem, currentPath === '/users' ? classes.selected : null)}>
                     <ListItemIcon>
                         <PersonOutlineOutlinedIcon color="primary" />
                     </ListItemIcon>
@@ -85,7 +93,7 @@ const MenuListItems = () => {
             <Divider />
 
             <Link className={classes.link} to="/settings">
-            <MenuItem button className={classes.activeItem}>
+                <MenuItem button className={clsx(classes.activeItem, currentPath === '/settings' ? classes.selected : null)}>
                     <ListItemIcon>
                         <SettingsOutlinedIcon color="primary" />
                     </ListItemIcon>

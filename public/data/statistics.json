@@ -1,0 +1,70 @@
+{
+    "sales": [
+        {
+            "label": "Websites",
+            "value": 44
+        },
+        {
+            "label": "Logo",
+            "value": 55
+        },
+        {
+            "label": "Social Media",
+            "value": 41
+        },
+        {
+            "label": "Adwords",
+            "value": 17
+        },
+        {
+            "label": "E-commerce",
+            "value": 15
+        }
+    ],
+    "report": [
+        {
+            "time": "00:00",
+            "amount": 300
+        },
+        {
+            "time": "01:00",
+            "amount": 350
+        },
+        {
+            "time": "02:00",
+            "amount": 280
+        },
+        {
+            "time": "03:00",
+            "amount": 380
+        },
+        {
+            "time": "04:00",
+            "amount": 350
+        },
+        {
+            "time": "05:00",
+            "amount": 700
+        },
+        {
+            "time": "07:00",
+            "amount": 400
+        },
+        {
+            "time": "08:00",
+            "amount": 450
+        },
+        {
+            "time": "09:00",
+            "amount": 280
+        },
+        {
+            "time": "10:00",
+            "amount": 350
+        },
+        {
+            "time": "11:00",
+            "amount": 280
+        }
+    ]
+}

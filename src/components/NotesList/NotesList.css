@@ -1,0 +1,68 @@
+.MuiSvgIcon-root.time-icon {
+    width: 15px;
+    margin-right: 4px;
+}
+
+.display-date {
+    display: flex;
+    align-items: center;
+    color: #8492af;
+}
+
+.display-date.time-delayed {
+    color: #f83c7b;
+}
+
+.MuiSvgIcon-root.context-menu {
+    height: 51px;
+    width: 29px;
+    align-self: center;
+    margin-left: auto;
+    cursor: pointer;
+    color: #8492af;
+}
+
+.actions-btn {
+    margin-top: 4px
+}
+
+.MuiSvgIcon-root.action-btn {
+    height: 21px;
+    width: 25px;
+    align-self: center;
+    margin-left: auto;
+    cursor: pointer;
+    color: #8492af;
+}
+
+.MuiList-root.notes-list {
+    width: 100%;
+}
+
+.notes {
+    max-height: 29.6vh;
+    overflow-y: auto;
+}
+
+.note-wrapper {
+    border: 1px solid #e8ebf0;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.title-list-item-text {
+    display: flex;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.MuiIconButton-root.user-avatar-arrow {
+    margin-left: -14px;
+    pointer-events: none;
+}

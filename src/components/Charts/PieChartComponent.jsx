@@ -22,15 +22,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const optionsState = {
-    chart: {
-        type: 'donut',
-    },
+const getOptions = (labels) => ({
+    chart: { type: 'donut' },
     colors: ['#25396e', '#5584ff', '#4b74e0', '#4164c2', '#3755a4'],
-    labels: ["Websites", "Logo", "Social Media", "Adwords", "E-commerce"],
-    dataLabels: {
-        enabled: false,
-    },
+    labels,
+    dataLabels: { enabled: false },
     stroke: { width: 0 },
     plotOptions: {
         pie: {
@@ -61,13 +57,12 @@ const optionsState = {
             }
         }
     }]
-};
+})
 
 
-const PieChartComponent = () => {
+const PieChartComponent = (props) => {
     const classes = useStyles();
-    const [series, setSeries] = useState([44, 55, 41, 17, 15]);
-    const [options, setOptions] = useState(optionsState);
+    const [options] = useState(getOptions(props.labels));
     return (
         <div id="chart">
             <div className={classes.chartHeader}>
@@ -90,13 +85,18 @@ const PieChartComponent = () => {
             </div>
             <Chart
                 options={options}
-                series={series}
+                series={props.series}
                 type="donut"
                 width={325}
                 height={180}
             />
         </div>
     )
+}
+
+PieChartComponent.defaultProps = {
+    series: [],
+    labels: [],
 }
 
 export default PieChartComponent;

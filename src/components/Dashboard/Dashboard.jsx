@@ -1,48 +1,51 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
-import Avatar from '@material-ui/core/Avatar';
-import MenuOpenIcon from '@material-ui/icons/MenuOpen';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import EmailIcon from '@material-ui/icons/Email';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import SearchIcon from '@material-ui/icons/Search';
-import MenuListItems from '../MenuListItems/MenuListItems';
-import { Button, Container, Typography } from '@material-ui/core';
-import AddIcon from '@material-ui/icons/Add';
-import DashboardRoutes from '../../routes/DashboardRoutes';
+import React, { useState, Fragment } from "react";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Drawer from "@material-ui/core/Drawer";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Badge from "@material-ui/core/Badge";
+import Avatar from "@material-ui/core/Avatar";
+import MenuOpenIcon from "@material-ui/icons/MenuOpen";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import EmailIcon from "@material-ui/icons/Email";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import SearchIcon from "@material-ui/icons/Search";
+import MenuListItems from "../MenuListItems/MenuListItems";
+import { Button, Container, Typography } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import DashboardRoutes from "../../routes/DashboardRoutes";
+
+import "./Dashboard.css";
 
 const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
     margin: 5,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   menuHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: -45,
+    marginTop: 4,
     ...theme.mixins.toolbar,
   },
   appBar: {
-    backgroundColor: 'transparent',
-    color: 'black',
+    backgroundColor: "transparent",
+    color: "black",
     zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
+    transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
@@ -50,49 +53,49 @@ const useStyles = makeStyles((theme) => ({
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
+    transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
   avatar: {
-    display: 'inline-flex',
-    '& > *': {
+    display: "inline-flex",
+    "& > *": {
       marginLeft: theme.spacing(1),
     },
   },
   button: {
     borderRadius: 25,
     marginRight: 15,
-    textTransform: 'unset !important',
+    textTransform: "unset !important",
   },
   drawerPaper: {
-    position: 'relative',
-    whiteSpace: 'nowrap',
+    position: "relative",
+    whiteSpace: "nowrap",
     backgroundColor: "#0e1a35",
     color: "white",
     width: drawerWidth,
-    transition: theme.transitions.create('width', {
+    transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
   drawerPaperClose: {
-    overflowX: 'hidden',
-    transition: theme.transitions.create('width', {
+    overflowX: "hidden",
+    transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     width: theme.spacing(7),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: theme.spacing(9),
     },
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    height: '100vh',
-    overflow: 'auto',
+    height: "100vh",
+    overflow: "auto",
   },
   container: {
     paddingTop: theme.spacing(5),
@@ -109,15 +112,15 @@ const Dashboard = () => {
   };
 
   return (
-
     <div className={classes.root}>
       <CssBaseline />
 
       {/* AppBar */}
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
+      <AppBar
+        position="absolute"
+        className={clsx(classes.appBar, open && classes.appBarShift)}
+      >
         <Toolbar className={classes.toolbar}>
-
-          {/* Vertical Menu  */}
           <div className={classes.navigationButtons}>
             <IconButton
               edge="start"
@@ -132,14 +135,13 @@ const Dashboard = () => {
             </IconButton>
           </div>
 
-
-          {/* Horizontal Menu  */}
           <div className={classes.actionsButtons}>
             <Button
               className={classes.button}
               variant="contained"
               startIcon={<AddIcon />}
-              color="primary">
+              color="primary"
+            >
               Add project
             </Button>
             <IconButton color="inherit">
@@ -152,7 +154,7 @@ const Dashboard = () => {
             </IconButton>
             <div className={classes.avatar}>
               <Avatar alt="John" src="/static/images/avatar/3.jpg" />
-              <IconButton color="inherit">
+              <IconButton color="inherit" className="user-avatar-arrow">
                 <ArrowDropDownIcon />
               </IconButton>
             </div>
@@ -169,7 +171,14 @@ const Dashboard = () => {
         open={open}
       >
         <div className={classes.menuHeader}>
-          {open && <Typography variant="h6" component="h2">Merukry</Typography>}
+          {open && (
+            <Fragment>
+              <img src="/images/app-logo.PNG" />
+              <Typography variant="h6" component="h1">
+                Merukry
+              </Typography>
+            </Fragment>
+          )}
         </div>
         <MenuListItems />
       </Drawer>
@@ -181,9 +190,8 @@ const Dashboard = () => {
           <DashboardRoutes />
         </Container>
       </div>
-
-    </div >
+    </div>
   );
-}
+};
 
 export default Dashboard;
