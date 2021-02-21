@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import "./NotesList.css";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,20 +18,32 @@ import {
   getTimeTextByDate,
   getIsTimePassed,
 } from "../../services/date.service";
+import { Badge, IconButton } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: 0,
     backgroundColor: theme.palette.background.paper,
   },
+  listHeader: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
   noteHeader: {
     padding: 0,
     fontWeight: "bold",
+  },
+  unread: {
+    backgroundColor: "#f4f5f8",
   },
   inline: {
     display: "inline",
   },
 }));
+
+const TYPE_TASK = "task";
+const TYPE_MESSAGES = "messages";
+const TYPE_ACTIVITY = "activity";
 
 const NotesList = (props) => {
   const {
@@ -47,6 +59,28 @@ const NotesList = (props) => {
   } = props;
   const classes = useStyles();
 
+  const [notifactions, setNotifactions] = useState([]);
+
+  useEffect(() => {
+    setNoteNotifactions();
+  }, [type]);
+
+  const setNoteNotifactions = () => {
+    switch (type.toLowerCase()) {
+      case TYPE_TASK:
+        setNotifactions([5, 2]);
+        break;
+      case TYPE_MESSAGES:
+        setNotifactions([2]);
+        break;
+      case TYPE_ACTIVITY:
+        setNotifactions([10]);
+        break;
+      default:
+        throw new Error("Unknown Type");
+    }
+  };
+
   return (
     <List
       component="nav"
@@ -56,9 +90,24 @@ const NotesList = (props) => {
       <ListItem>
         <ListItemText
           primary={
-            <Typography className={classes.noteHeader} id="subheader">
-              {type}
-            </Typography>
+            <div className={classes.listHeader}>
+              <Typography className={classes.noteHeader} id="subheader">
+                {type}
+              </Typography>
+              <div className={classes.noteBadges}>
+                <IconButton color="inherit">
+                  <Badge badgeContent={notifactions[0]} color="primary"></Badge>
+                </IconButton>
+                {notifactions.length > 1 && (
+                  <IconButton color="inherit">
+                    <Badge
+                      badgeContent={notifactions[1]}
+                      color="secondary"
+                    ></Badge>
+                  </IconButton>
+                )}
+              </div>
+            </div>
           }
         />
       </ListItem>
@@ -73,7 +122,14 @@ const NotesList = (props) => {
 
           return (
             <Fragment key={index}>
-              <ListItem alignItems="flex-start">
+              <ListItem
+                className={
+                  type.toLowerCase() === TYPE_MESSAGES && index < 2
+                    ? classes.unread
+                    : ""
+                }
+                alignItems="flex-start"
+              >
                 <ListItemAvatar>
                   <Avatar alt={username} src={userImage} />
                 </ListItemAvatar>
@@ -121,7 +177,7 @@ const NotesList = (props) => {
                         )}
                       </span>
                     }
-                    secondary={content}
+                    secondary={<p className="content">{content}</p>}
                   />
 
                   {!isDateNextToName && (

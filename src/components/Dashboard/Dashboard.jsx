@@ -17,7 +17,6 @@ import MenuListItems from "../MenuListItems/MenuListItems";
 import { Button, Container, Typography } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import DashboardRoutes from "../../routes/DashboardRoutes";
-
 import "./Dashboard.css";
 
 const drawerWidth = 200;
@@ -110,7 +109,7 @@ const Dashboard = () => {
   const toggleDrawerOpen = () => {
     toggleOpen(!open);
   };
-
+  
   return (
     <div className={classes.root}>
       <CssBaseline />

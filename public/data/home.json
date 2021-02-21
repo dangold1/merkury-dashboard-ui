@@ -1,23 +1,23 @@
 {
     "sales": [{
             "label": "Websites",
-            "value": 44
+            "value": 324
         },
         {
             "label": "Logo",
-            "value": 55
+            "value": 332
         },
         {
             "label": "Social Media",
-            "value": 41
+            "value": 318
         },
         {
             "label": "Adwords",
-            "value": 17
+            "value": 294
         },
         {
             "label": "E-commerce",
-            "value": 15
+            "value": 292
         }
     ],
     "report": [{

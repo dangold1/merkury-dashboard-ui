@@ -1,16 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import LineChartComponent from "../components/Charts/LineChartComponent";
 import PieChartComponent from "../components/Charts/PieChartComponent";
 import { Grid, Paper } from "@material-ui/core";
-import useFetch from "../hooks/useFetch";
 import { mapSalesData } from "../services/sales.service";
 import { isEmpty } from "lodash";
 import {
   LoadingComponent,
   ErrorComponent,
 } from "../components/ExceptionComponents/ExceptionComponents";
+import { useDashboardContext } from "../context/dashboard.context";
+import {
+  loadStatisticsDataAction,
+  setStatisticsDataAction,
+} from "../actions/statistics.actions";
+import { fetchStatisticsData } from "../services/statistics.service";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -28,13 +33,24 @@ const StatisticsPage = () => {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
-  const { data, error, isLoading } = useFetch("data/statistics.json");
+  const { dashboardState, dispatch } = useDashboardContext();
+  const { data, error, isLoading } = dashboardState.statisticsData;
+
+  const didMount = async () => {
+    await dispatch(loadStatisticsDataAction());
+    const actionData = await fetchStatisticsData();
+    await dispatch(setStatisticsDataAction(actionData));
+  };
+
+  useEffect(() => {
+    didMount();
+  }, []);
 
   if (isLoading) {
     return <LoadingComponent />;
   }
 
-  if (error || isEmpty(data)) {
+  if (error || isEmpty(data) && !isLoading) {
     return (
       <ErrorComponent message="Had a network error, please try again later" />
     );

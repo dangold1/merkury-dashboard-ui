@@ -1,17 +1,20 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import LineChartComponent from "../components/Charts/LineChartComponent";
 import PieChartComponent from "../components/Charts/PieChartComponent";
 import { Grid, Paper } from "@material-ui/core";
 import NotesList from "../components/NotesList/NotesList";
-import useFetch from "../hooks/useFetch";
 import { mapSalesData } from "../services/sales.service";
 import { isEmpty } from "lodash";
 import {
   LoadingComponent,
   ErrorComponent,
 } from "../components/ExceptionComponents/ExceptionComponents";
+import { useDashboardContext } from "../context/dashboard.context";
+import { loadHomeDataAction, setHomeDataAction } from "../actions/home.actions";
+import { fetchHomeData } from "../services/home.service";
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
@@ -34,7 +37,19 @@ const useStyles = makeStyles((theme) => ({
 const HomePage = () => {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-  const { data, error, isLoading } = useFetch("data/home.json");
+  
+  const { dashboardState, dispatch } = useDashboardContext();
+  const { data, error, isLoading } = dashboardState.homeData;
+
+  const didMount = async () => {
+    await dispatch(loadHomeDataAction());
+    const actionData = await fetchHomeData();
+    await dispatch(setHomeDataAction(actionData));
+  };
+
+  useEffect(() => {
+    didMount();
+  }, []);
 
   if (isLoading) {
     return <LoadingComponent />;
@@ -67,7 +82,7 @@ const HomePage = () => {
       </Grid>
 
       {/* Notes Lists */}
-      <Grid container spacing={5}>
+      <Grid container spacing={4}>
         <Grid item xs={12} md={4} lg={4}>
           <div className="note-wrapper">
             <NotesList

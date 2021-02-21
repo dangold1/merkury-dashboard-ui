@@ -66,3 +66,8 @@
     margin-left: -14px;
     pointer-events: none;
 }
+
+.content {
+    font-size: 11px;
+    color: black;
+}
