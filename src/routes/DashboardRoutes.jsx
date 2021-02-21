@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import WorkflowPage from "../pages/WorkflowPage";

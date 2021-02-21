@@ -1,5 +1,5 @@
 import "./App.css";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { DashboardContextProvider } from "./context/dashboard.context";
@@ -17,13 +17,13 @@ const theme = createMuiTheme({
 
 function App() {
     return (
-        <HashRouter basename='/' >
+        <Router >
             <MuiThemeProvider theme={theme} >
                 <DashboardContextProvider>
                     <Dashboard />
                 </DashboardContextProvider>
             </MuiThemeProvider>
-        </HashRouter>
+        </Router>
     );
 }
 
