@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/merkury-dashboard-ui/static/css/main.9d3bcaa5.chunk.css",
-    "main.js": "/merkury-dashboard-ui/static/js/main.c018f01f.chunk.js",
-    "main.js.map": "/merkury-dashboard-ui/static/js/main.c018f01f.chunk.js.map",
+    "main.js": "/merkury-dashboard-ui/static/js/main.6ceb515f.chunk.js",
+    "main.js.map": "/merkury-dashboard-ui/static/js/main.6ceb515f.chunk.js.map",
     "runtime-main.js": "/merkury-dashboard-ui/static/js/runtime-main.a1d54846.js",
     "runtime-main.js.map": "/merkury-dashboard-ui/static/js/runtime-main.a1d54846.js.map",
-    "static/js/2.984fa516.chunk.js": "/merkury-dashboard-ui/static/js/2.984fa516.chunk.js",
-    "static/js/2.984fa516.chunk.js.map": "/merkury-dashboard-ui/static/js/2.984fa516.chunk.js.map",
+    "static/js/2.f58c3552.chunk.js": "/merkury-dashboard-ui/static/js/2.f58c3552.chunk.js",
+    "static/js/2.f58c3552.chunk.js.map": "/merkury-dashboard-ui/static/js/2.f58c3552.chunk.js.map",
     "static/js/3.f868684c.chunk.js": "/merkury-dashboard-ui/static/js/3.f868684c.chunk.js",
     "static/js/3.f868684c.chunk.js.map": "/merkury-dashboard-ui/static/js/3.f868684c.chunk.js.map",
     "index.html": "/merkury-dashboard-ui/index.html",
     "static/css/main.9d3bcaa5.chunk.css.map": "/merkury-dashboard-ui/static/css/main.9d3bcaa5.chunk.css.map",
-    "static/js/2.984fa516.chunk.js.LICENSE.txt": "/merkury-dashboard-ui/static/js/2.984fa516.chunk.js.LICENSE.txt"
+    "static/js/2.f58c3552.chunk.js.LICENSE.txt": "/merkury-dashboard-ui/static/js/2.f58c3552.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a1d54846.js",
-    "static/js/2.984fa516.chunk.js",
+    "static/js/2.f58c3552.chunk.js",
     "static/css/main.9d3bcaa5.chunk.css",
-    "static/js/main.c018f01f.chunk.js"
+    "static/js/main.6ceb515f.chunk.js"
   ]
 }
