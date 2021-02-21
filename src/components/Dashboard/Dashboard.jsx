@@ -172,7 +172,7 @@ const Dashboard = () => {
         <div className={classes.menuHeader}>
           {open && (
             <Fragment>
-              <img src="/images/app-logo.PNG" />
+              <img src={process.env.PUBLIC_URL +"/images/app-logo.PNG"} />
               <Typography variant="h6" component="h1">
                 Merukry
               </Typography>
