@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/merukry-dashboard-ui/static/css/main.9d3bcaa5.chunk.css",
-    "main.js": "/merukry-dashboard-ui/static/js/main.6c37ab19.chunk.js",
-    "main.js.map": "/merukry-dashboard-ui/static/js/main.6c37ab19.chunk.js.map",
-    "runtime-main.js": "/merukry-dashboard-ui/static/js/runtime-main.9176a3f6.js",
-    "runtime-main.js.map": "/merukry-dashboard-ui/static/js/runtime-main.9176a3f6.js.map",
-    "static/js/2.3023b62d.chunk.js": "/merukry-dashboard-ui/static/js/2.3023b62d.chunk.js",
-    "static/js/2.3023b62d.chunk.js.map": "/merukry-dashboard-ui/static/js/2.3023b62d.chunk.js.map",
-    "static/js/3.cbc566dd.chunk.js": "/merukry-dashboard-ui/static/js/3.cbc566dd.chunk.js",
-    "static/js/3.cbc566dd.chunk.js.map": "/merukry-dashboard-ui/static/js/3.cbc566dd.chunk.js.map",
-    "index.html": "/merukry-dashboard-ui/index.html",
-    "static/css/main.9d3bcaa5.chunk.css.map": "/merukry-dashboard-ui/static/css/main.9d3bcaa5.chunk.css.map",
-    "static/js/2.3023b62d.chunk.js.LICENSE.txt": "/merukry-dashboard-ui/static/js/2.3023b62d.chunk.js.LICENSE.txt"
+    "main.css": "/merkury-dashboard-ui/static/css/main.9d3bcaa5.chunk.css",
+    "main.js": "/merkury-dashboard-ui/static/js/main.d2d8e274.chunk.js",
+    "main.js.map": "/merkury-dashboard-ui/static/js/main.d2d8e274.chunk.js.map",
+    "runtime-main.js": "/merkury-dashboard-ui/static/js/runtime-main.7efa1900.js",
+    "runtime-main.js.map": "/merkury-dashboard-ui/static/js/runtime-main.7efa1900.js.map",
+    "static/js/2.396be43a.chunk.js": "/merkury-dashboard-ui/static/js/2.396be43a.chunk.js",
+    "static/js/2.396be43a.chunk.js.map": "/merkury-dashboard-ui/static/js/2.396be43a.chunk.js.map",
+    "static/js/3.cbc566dd.chunk.js": "/merkury-dashboard-ui/static/js/3.cbc566dd.chunk.js",
+    "static/js/3.cbc566dd.chunk.js.map": "/merkury-dashboard-ui/static/js/3.cbc566dd.chunk.js.map",
+    "index.html": "/merkury-dashboard-ui/index.html",
+    "static/css/main.9d3bcaa5.chunk.css.map": "/merkury-dashboard-ui/static/css/main.9d3bcaa5.chunk.css.map",
+    "static/js/2.396be43a.chunk.js.LICENSE.txt": "/merkury-dashboard-ui/static/js/2.396be43a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9176a3f6.js",
-    "static/js/2.3023b62d.chunk.js",
+    "static/js/runtime-main.7efa1900.js",
+    "static/js/2.396be43a.chunk.js",
     "static/css/main.9d3bcaa5.chunk.css",
-    "static/js/main.6c37ab19.chunk.js"
+    "static/js/main.d2d8e274.chunk.js"
   ]
 }
