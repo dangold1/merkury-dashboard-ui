@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/merukry-dashboard-ui/static/css/main.9d3bcaa5.chunk.css",
+    "main.js": "/merukry-dashboard-ui/static/js/main.5bd2e165.chunk.js",
+    "main.js.map": "/merukry-dashboard-ui/static/js/main.5bd2e165.chunk.js.map",
+    "runtime-main.js": "/merukry-dashboard-ui/static/js/runtime-main.a334e160.js",
+    "runtime-main.js.map": "/merukry-dashboard-ui/static/js/runtime-main.a334e160.js.map",
+    "static/js/2.6be85ac5.chunk.js": "/merukry-dashboard-ui/static/js/2.6be85ac5.chunk.js",
+    "static/js/2.6be85ac5.chunk.js.map": "/merukry-dashboard-ui/static/js/2.6be85ac5.chunk.js.map",
+    "static/js/3.ea2025e2.chunk.js": "/merukry-dashboard-ui/static/js/3.ea2025e2.chunk.js",
+    "static/js/3.ea2025e2.chunk.js.map": "/merukry-dashboard-ui/static/js/3.ea2025e2.chunk.js.map",
+    "index.html": "/merukry-dashboard-ui/index.html",
+    "static/css/main.9d3bcaa5.chunk.css.map": "/merukry-dashboard-ui/static/css/main.9d3bcaa5.chunk.css.map",
+    "static/js/2.6be85ac5.chunk.js.LICENSE.txt": "/merukry-dashboard-ui/static/js/2.6be85ac5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a334e160.js",
+    "static/js/2.6be85ac5.chunk.js",
+    "static/css/main.9d3bcaa5.chunk.css",
+    "static/js/main.5bd2e165.chunk.js"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+    "sales": [{
+            "label": "Websites",
+            "value": 324
+        },
+        {
+            "label": "Logo",
+            "value": 332
+        },
+        {
+            "label": "Social Media",
+            "value": 318
+        },
+        {
+            "label": "Adwords",
+            "value": 294
+        },
+        {
+            "label": "E-commerce",
+            "value": 292
+        }
+    ],
+    "report": [{
+            "time": "00:00",
+            "amount": 300
+        },
+        {
+            "time": "01:00",
+            "amount": 350
+        },
+        {
+            "time": "02:00",
+            "amount": 280
+        },
+        {
+            "time": "03:00",
+            "amount": 380
+        },
+        {
+            "time": "04:00",
+            "amount": 350
+        },
+        {
+            "time": "05:00",
+            "amount": 700
+        },
+        {
+            "time": "07:00",
+            "amount": 400
+        },
+        {
+            "time": "08:00",
+            "amount": 450
+        },
+        {
+            "time": "09:00",
+            "amount": 280
+        },
+        {
+            "time": "10:00",
+            "amount": 350
+        },
+        {
+            "time": "11:00",
+            "amount": 280
+        }
+    ],
+    "tasks": [{
+            "user": {
+                "name": "N",
+                "image": ""
+            },
+            "title": "New Website for Symu.co",
+            "date": "2021-02-14T21:47:11.772Z"
+        },
+        {
+            "user": {
+                "name": "F",
+                "image": ""
+            },
+            "title": "Free business PSD Template",
+            "date": "2021-02-17T21:47:11.772Z"
+        },
+        {
+            "user": {
+                "name": "N",
+                "image": ""
+            },
+            "title": "New logo for JCD.pl",
+            "date": "2021-02-24T21:47:11.772Z"
+        },
+        {
+            "user": {
+                "name": "F",
+                "image": ""
+            },
+            "title": "Free business PSD Template",
+            "date": "2021-02-28T21:47:11.772Z"
+        }
+    ],
+    "messages": [{
+            "author": "Nina Jones",
+            "content": "Hey You! It's me again :-) attached new (...)",
+            "is_read": false,
+            "date": "2021-02-19T21:32:01.723Z"
+        },
+        {
+            "author": "Nina Jones",
+            "content": "Hey! I attached some new PSD files for (...)",
+            "is_read": false,
+            "date": "2021-02-19T21:25:01.723Z"
+        },
+        {
+            "author": "James Smith",
+            "content": "Good morning, you are fired!",
+            "is_read": true,
+            "date": "2021-02-17T21:32:01.723Z"
+        },
+        {
+            "author": "Nina Jones",
+            "content": "Hello, Cold You being me coffe please?",
+            "is_read": true,
+            "date": "2021-02-05T21:32:01.723Z"
+        }
+    ],
+    "activity": [{
+            "author": "Nina Jones",
+            "action": "added a new project",
+            "task": "Free UI Kit",
+            "date": "2021-02-19T21:32:01.723Z"
+        },
+        {
+            "author": "James Smith",
+            "action": "commented project",
+            "task": "Free PSD Template",
+            "date": "2021-02-19T21:00:01.723Z"
+        },
+        {
+            "author": "Alex Clonney",
+            "action": "completed task",
+            "task": "Symu Website",
+            "date": "2021-02-18T21:32:01.723Z"
+        },
+        {
+            "author": "Alexandra Spears",
+            "action": "added a new project",
+            "task": "Free PSD (...)",
+            "date": "2021-02-19T19:32:01.723Z"
+        }
+    ]
+}
