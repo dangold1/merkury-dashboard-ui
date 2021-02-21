@@ -109,7 +109,7 @@ const Dashboard = () => {
   const toggleDrawerOpen = () => {
     toggleOpen(!open);
   };
-  
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -172,9 +172,9 @@ const Dashboard = () => {
         <div className={classes.menuHeader}>
           {open && (
             <Fragment>
-              <img src={process.env.PUBLIC_URL +"/images/app-logo.PNG"} />
+              <img src={process.env.PUBLIC_URL + "/images/app-logo.PNG"} />
               <Typography variant="h6" component="h1">
-                Merukry
+                Merkury
               </Typography>
             </Fragment>
           )}
