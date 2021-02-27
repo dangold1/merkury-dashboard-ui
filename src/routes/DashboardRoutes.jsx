@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/HomePage/HomePage";
 import WorkflowPage from "../pages/WorkflowPage";
-import StatisticsPage from "../pages/StatisticsPage";
+import StatisticsPage from "../pages/StatisticsPage/StatisticsPage";
 import CalendarPage from "../pages/CalendarPage";
 import UsersPage from "../pages/UsersPage";
 import SettingsPage from "../pages/SettingsPage";

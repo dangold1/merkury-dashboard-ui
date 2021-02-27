@@ -1,0 +1,42 @@
+.home-header {
+  padding: 5px;
+  margin: 5px;
+  display: flex-start;
+  width: 60%;
+}
+
+.hello-text {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.charts-flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+}
+
+.chart-wrapper {
+  border: 1px solid #e4e8ef;
+  background-color: white;
+  width: 100%;
+  margin: 10px;
+}
+
+.notes-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.note-col {
+  flex: 1;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .notes-grid {
+    width: 70%;
+  }
+}

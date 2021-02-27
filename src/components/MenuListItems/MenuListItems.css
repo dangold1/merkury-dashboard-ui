@@ -1,6 +1,36 @@
-.item-button:focus,
-.item-button:active,
-.item-button:hover .item-button[aria-controls="demo-popup-popover"] {
-    background-color: #122143;
-    border-left: 6px solid #5584ff !important;
+.link {
+  width: 180px;
+  list-style-type: none; /* Remove bullets */
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 15px 0 15px 15px;
+  margin: 0;
+}
+
+.link:hover {
+  background-color: #122143;
+}
+
+.link:active,
+.link:focus,
+.link.selected {
+  background-color: #122143;
+  border-left: 6px solid #5584ff;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.MuiSvgIcon-root.icon-margin {
+  margin-right: 15px;
+}
+
+.items-hr {
+  border: 1px solid #0d172e;
+  margin: 0;
+  padding: 0;
+  /* So keep them as they are - you can change the values of course */
 }

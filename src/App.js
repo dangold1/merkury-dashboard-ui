@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { DashboardContextProvider } from "./context/dashboard.context";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
     palette: {
@@ -23,6 +23,7 @@ function App() {
                     <Dashboard />
                 </DashboardContextProvider>
             </MuiThemeProvider>
+
         </Router>
     );
 }

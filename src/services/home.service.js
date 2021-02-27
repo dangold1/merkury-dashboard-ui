@@ -7,7 +7,6 @@ export const fetchHomeData = async () => {
             }
         });
         const json = await res.json();
-        console.log({ json })
         return { data: json, error: null };
     } catch (error) {
         return { data: null, error };
