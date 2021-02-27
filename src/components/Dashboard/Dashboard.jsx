@@ -11,9 +11,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import MenuListItems from "../MenuListItems/MenuListItems";
 import AddIcon from "@material-ui/icons/Add";
 import DashboardRoutes from "../../routes/DashboardRoutes";
+import useCheckMobileScreen from "../../hooks/useCheckMobileScreen";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  const isMobileMode = useCheckMobileScreen();
   const [open, toggleOpen] = useState(true);
 
   const toggleDrawerOpen = () => {
@@ -37,6 +39,15 @@ const Dashboard = () => {
     >
       <MenuOpenIcon />
     </IconButton>
+  );
+
+  const renderAvatar = () => (
+    <div className="avatar">
+      <Avatar alt="John" src="/static/images/avatar/3.jpg" />
+      <IconButton color="inherit" className="user-avatar-arrow">
+        <ArrowDropDownIcon />
+      </IconButton>
+    </div>
   );
 
   return (
@@ -76,12 +87,7 @@ const Dashboard = () => {
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
-              <div className="avatar">
-                <Avatar alt="John" src="/static/images/avatar/3.jpg" />
-                <IconButton color="inherit" className="user-avatar-arrow">
-                  <ArrowDropDownIcon />
-                </IconButton>
-              </div>
+              {!isMobileMode && renderAvatar()}
             </div>
           </div>
         </div>

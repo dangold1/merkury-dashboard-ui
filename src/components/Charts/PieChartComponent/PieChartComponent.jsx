@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
 import ChartHeader from "../../ChartHeader/ChartHeader";
+import useCheckMobileScreen from "../../../hooks/useCheckMobileScreen";
 
 const getOptions = (labels) => ({
   chart: { type: "donut" },
@@ -42,6 +43,7 @@ const getOptions = (labels) => ({
 });
 
 const PieChartComponent = (props) => {
+  const isMobileMode = useCheckMobileScreen();
   const [options] = useState(getOptions(props.labels));
   return (
     <div id="chart">
@@ -50,8 +52,8 @@ const PieChartComponent = (props) => {
         options={options}
         series={props.series}
         type="donut"
-        width={325}
-        height={180}
+        width={isMobileMode ? 200 : 325}
+        height={isMobileMode ? 250 : 180}
       />
     </div>
   );

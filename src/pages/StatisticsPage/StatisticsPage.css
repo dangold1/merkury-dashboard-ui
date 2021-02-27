@@ -21,3 +21,18 @@
   width: 100%;
   margin: 10px;
 }
+
+@media screen and (max-width: 750px) {
+  .charts-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .notes-grid {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
